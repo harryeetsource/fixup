@@ -112,7 +112,7 @@ fn remove_temporary_files(temp: &str, system_root: &str, error_messages: &mut Ve
         SystemCommand { program: "powershell", args: vec!["-command", &temp_system_command] },
         SystemCommand {
             program: "cmd",
-            args: vec!["/c", "for /d %i in (C:\\Users\\*) do rd /s /q \"%i\\AppData\\Local\\Temp\""]
+            args: vec!["/c", "for /d %i in (C:\\Users\\*) do rd /s /q "%i\\AppData\\Local\\Temp\""]
         },
         SystemCommand {
             program: "net",
